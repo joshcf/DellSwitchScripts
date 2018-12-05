@@ -5,6 +5,17 @@ Scripts for managing Dell N1500 and N2000 switches
 
 CSV file that lists all the edge switches by hostname and useful info for them such as location and zone.
 
+CSV is in the following format:
+
+Hostname,Location,Zone,Domzone
+
+Hostname = Hostname of switch
+Location = Used for course location of switch
+Zone = Used for network zone
+Domzone = used for secondary network zone info
+
+For use with firmware update, only the first column is needed.
+
 ## fimrwareUpdate.py
 
 This script loops through each switch defined in dellSwitches.csv and goes through the update process as described in the Dell documentation for updating to version 6.5.2.18 on N1500 and N2000 switches.
