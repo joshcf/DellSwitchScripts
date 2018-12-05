@@ -20,6 +20,14 @@ Domzone = used for secondary network zone info
 
 For use with firmware update, only the first column is needed.
 
+## coreSwitches.csv
+
+Similar to dellSwitches.csv, but for the core switches.
+
+## serverSwitches.csv
+
+Similar to dellSwitches.csv, but for the server top of rack switches.
+
 ## fimrwareUpdate.py
 
 This script loops through each switch defined in dellSwitches.csv and goes through the update process as described in the Dell documentation for updating to version 6.5.2.18 on N1500 and N2000 switches.
@@ -44,3 +52,11 @@ For each switch it will:
  - Connect to the switch again
  - If N1500, ends here, if N2000 check CPLD version
  - If CPLD version is not 20 (current for the 6.5.2.18 firmware) and the switch is not in a stack, update the CPLD
+
+## tftpRunningConfig.py
+
+Script that goes through all the switches defined in the CSV files and copys the running config to the TFTP server specified.
+
+## writeConfig.py
+
+Script that goes through all the switches defined in the CSV files and writes the running config to memory.
