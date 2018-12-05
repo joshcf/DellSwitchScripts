@@ -1,0 +1,4 @@
+Host,VRRP
+core_Switch_01,150
+core_Switch_02,140
+core_Switch_03,130
